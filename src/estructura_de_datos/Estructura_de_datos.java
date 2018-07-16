@@ -44,7 +44,22 @@ public class Estructura_de_datos {
       System.out.println(" lo que se tarda el bubble sort es: "+duracionNS+" nanosegundos");
         
         System.out.println("***********************************************************************");
+                System.out.println("heap\n");
+        heap heap = new heap();
+        heap.sort(arr);
+ 
+        System.out.println(" El arreglo ordenado es ");
+        heap.printArray(arr);
+    
+        final double NSh=1000000000;
+    
+        long inicioNSh=System.nanoTime();
+        heap.sort(arr);
+        long duracionNSh=System.nanoTime()-inicioNSh;
+        System.out.println(" lo que se tarda el heap sort es: "+duracionNSh+" nanosegundos");
         
+        
+        System.out.println("***********************************************************************");
         
         System.out.println("merge\n");
    	 
@@ -61,8 +76,22 @@ public class Estructura_de_datos {
           merge.sort(arr, x, x);
           long duracionNSm=System.nanoTime()-inicioNSm;
           System.out.println(" lo que se tarda el merge sort es: "+duracionNSm+" nanosegundos");
+          
+          System.out.println("***********************************************************************");
+          System.out.println("insertionsort");
+        insertionsort insertionsort=new insertionsort();
+        insertionsort.insertionSort(arr);
+          System.out.println("\nArreglo ordenado ");
+        insertionsort.printArray(arr);
+        
+        final double NSt=1000000000;
+          long inicioNSt=System.nanoTime();
+           insertionsort.printArray(arr);
+          long duracionNSt=System.nanoTime()-inicioNSt;
+          
+        System.out.println(" lo que se tarda el insertionsort es: "+duracionNSt+" nanosegundos");
 	}
-
-   
+    
+    
 }
 

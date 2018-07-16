@@ -11,12 +11,7 @@ package estructura_de_datos;
  */
 public class bubble {
     
-    
-    
-    
-    
-      
-      
+  
     
 	   void bubbleSort(int arr[])
 	    {
